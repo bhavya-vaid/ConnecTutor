@@ -1,0 +1,172 @@
+/* ------------achievements--------------- */
+.about_ach{
+    margin-top: 3rem;
+}
+
+.about_ach-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about_ach-right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.ach_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.ach_card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+
+}
+
+.ach_card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+}
+
+.ach_icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.ach_card:nth-child(2)
+.ach_icon{
+    background: green;
+}
+
+.ach_card:nth-child(3)
+.ach_icon{
+    background: var(--color-primary);
+}
+
+.ach_card p{
+    margin-top: 1rem;
+
+}
+
+/* ------------tutor--------------- */
+.tutors{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem gba(0,0,0,0.5);
+  
+}
+
+.tut_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.tutor{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.tutor:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.tut-img img{
+    filter: saturate(0);
+
+}
+
+.tutor:hover img{
+    filter: saturate(1);
+}
+
+.tut-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.tut-info p{
+    color: var(--color-light);
+}
+
+.tut-soc{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0.0.0.0/3);
+    /* -2 for x axies, 0 for y axis, */
+    transition: var(--transition);
+}
+
+.tutor:hover
+.tut-soc{
+    right: 0;
+}
+
+.tut_soc a{
+    padding: 1rem;
+}
+
+/* ------------------media queries(tablets)------------------------ */
+@media screen and (max-width: 1024px){
+    .about_ach{
+        margin-top: 2rem;
+    }
+
+    .about_ach-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about_ach-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .tut_container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+
+    .tutor{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+   .ach_cards{
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+   }
+
+   .tut_container{
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+   }
+
+   .tutor{
+    padding: 0;
+   }
+
+   .tut p{
+    margin-bottom: 1.5rem;
+   }
+}
